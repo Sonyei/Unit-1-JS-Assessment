@@ -121,9 +121,19 @@ function getStarshipPassengerAndCrewSumTotal(character) {
  * Given film #1, expected output: `A New Hope`
  * Given film #7, expected error: `There are only 3 Star Wars movies. Flan fiction excluded.`
 */
+
 function getNthFilm(character, filmNumber) {
-  // TODO: Add your code here.
-}
+  if(character.films.length < filmNumber) {
+    return `There are only 3 Star Wars movies. Flan fiction excluded.`
+  } else if(filmNumber === 1) {
+    return `${character.films[0]}`
+  } else if(filmNumber === 2) {
+    return `${character.films[1]}`
+  }
+  else if(filmNumber === 3) {
+    return`${character.films[2]}`
+  }
+};
 
 /**
  * ### Challenge `getCargoCapacityTotal`
