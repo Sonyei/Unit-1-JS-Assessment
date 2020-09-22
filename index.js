@@ -77,8 +77,13 @@ function getSummary(character) {
  * Sample data expected output: 8000
 */
 function getVehiclesCostInCreditsSumTotal(character) {
-  // TODO: Add your code here.
-}
+      let result = [];
+      let vehicles = character.vehicles.length;
+      for (let i = 0; i < vehicles; i++) {
+      result.push(character.vehicles[i].cost_in_credits);
+  }
+  return result.reduce ((acc, item)  => acc + item, 0);
+};
 
 /**
  * ### Challenge `getStarshipPassengerAndCrewSumTotal`
