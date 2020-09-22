@@ -96,8 +96,17 @@ function getVehiclesCostInCreditsSumTotal(character) {
  * Sample data expected output: 27
 */
 function getStarshipPassengerAndCrewSumTotal(character) {
-  // TODO: Add your code here.
-}
+      let crew = [];
+      let passengers = [];
+      let starships = character.starships.length;
+      for (let i = 0; i < starships; i++) {
+      crew.push(character.starships[i].crew);
+      passengers.push(character.starships[i].passengers);
+  }
+  let x = crew.reduce ((acc, item)  => acc + item, 0);
+  let y = passengers.reduce ((acc, item)  => acc + item, 0);
+  return x+y;
+};
 
 /**
  * ### Challenge `getNthFilm`
