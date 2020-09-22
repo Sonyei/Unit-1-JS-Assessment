@@ -129,8 +129,7 @@ function getNthFilm(character, filmNumber) {
     return `${character.films[0]}`
   } else if(filmNumber === 2) {
     return `${character.films[1]}`
-  }
-  else if(filmNumber === 3) {
+  } else if(filmNumber === 3) {
     return`${character.films[2]}`
   }
 };
